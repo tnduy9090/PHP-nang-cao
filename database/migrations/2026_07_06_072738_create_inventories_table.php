@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->integer('stock');
+            $table->string('unit');
+            $table->bigInteger('supplier_id')->unsigned();
         });
     }
 

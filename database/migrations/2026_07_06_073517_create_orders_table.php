@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('transaction_time');
             $table->timestamps();
             $table->enum('order_type', ['dinein','reservation'])->default(null);
-            $table->bigInteger('id_reservasi')->unsigned()->nullable();
+            $table->bigInteger('id_reservasi',20)->unsigned()->nullable();
         });
     }
 
